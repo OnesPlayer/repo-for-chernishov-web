@@ -98,7 +98,7 @@
 
 // #9 Дан инпут. В него вводится слово. По нажатию на кнопку проверьте то, что это слово читается с начала и с конца одинаково (например, мадам).
 
-// let inp1 = document.querySelector('#inp1'), butt1 = document.querySelector('#butt1');
+// let inp1 = document.querySelector('#inp1'), butt1 = document.querySelector('#butt1')
 
 // butt1.addEventListener('click', function() {
 // 	if (inp1.value == inp1.value.split('').reverse().join('')) {
@@ -205,3 +205,93 @@
 // })
 
 // #17 Дан инпут. Даны абзацы. Пусть в этот инпут записывается суммарное количество нажатий по этим абзацам.
+
+// let inp1 = document.querySelector('#inp1'), p = document.querySelectorAll('p')
+// let [p1, p2, p3] = p
+
+// function f() {
+//     inp1.value = Number(inp1.value) + 1
+// }
+
+// p1.addEventListener('click', f)
+// p2.addEventListener('click', f)
+// p3.addEventListener('click', f)
+
+// #18 На странице есть дивы. В них есть текст. Обойдите все дивы и обрежьте тот текст, который в них стоит так, 
+//     чтобы он стал длиной 10 символов. И добавьте троеточие в конец обрезанного текста
+
+// let div = document.querySelectorAll('div'), a = [], n = 0
+// let [div1, div2, div3, div4] = div
+
+// for (let j of div) {
+//     a = j.textContent.split(' ')
+//     while (a.length > 10) {
+//         a.splice(9, a.length-10)
+//     }
+//     div[n].textContent = a.join(' ') + '...'
+//     n += 1
+// }
+
+// #19 Дан инпут и кнопка. По нажатию на кнопку сгенерируйте случайную строку из 8-ми символов и запишите в инпут.
+
+// let inp1 = document.querySelector('#inp1'), butt1 = document.querySelector('#butt1')
+
+// butt1.addEventListener('click', function() {
+//     let characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'
+//     let randomString = ''
+//     for (let i = 0; i < 8; i++) {
+//         let index = Math.floor(Math.random() * characters.length)
+//         randomString += characters[index]
+//     }
+//     inp1.value = randomString
+// })
+
+// #20 Дан инпут и кнопка. Пользователь вводит в инпут какую-то строку. По нажатию на кнопку перемешайте введенные символы случайным образом
+//     и запишите ее обратно в инпут.
+
+// let inp1 = document.querySelector('#inp1'), butt1 = document.querySelector('#butt1')
+
+// butt1.addEventListener('click', function() {
+//     let text = inp1.value.split('')
+//     let j = 0, n = '', n1 = ''
+//     for (let i = text.length - 1; i > 0; i--) {
+//         j = Math.floor(Math.random() * (i + 1))
+//         n = text[i]
+//         n1 = text[j]
+//         text[i] = n1
+//         text[j] = n
+//     }
+//     inp1.value = text.join('')
+// })
+
+// #21 Дан инпут, кнопка и абзац. В инпут вводится температура в градусах Фаренгейта. По клику на кнопку выведите в абзац температуру в градусах Цельсия.
+
+// let inp1 = document.querySelector('#inp1'), butt1 = document.querySelector('#butt1'), p1 = document.querySelector('#p1')
+
+// butt1.addEventListener('click', function() {
+//     p1.textContent = (Number(inp1.value) - 32) * (5/9)
+// })
+
+// #22 Дан инпут, кнопка и абзац. В инпут вводится число. По нажатию на кнопку выведите в абзац факториал этого числа.
+
+// let inp1 = document.querySelector('#inp1'), butt1 = document.querySelector('#butt1'), p1 = document.querySelector('#p1')
+
+// butt1.addEventListener('click', function() {
+//     let fact = 1
+//     for (let i = 1; i <= Number(inp1.value); i++) {
+//         fact *= i
+//     }
+//     p1.textContent = fact
+// })
+
+// #23 Даны 3 инпута, кнопка и абзац. В инпуты вводятся коэффициенты квадратного уравнения. По нажатию на кнопку найдите корни этого уравнения и выведите их в абзац.
+
+// let inp = document.querySelectorAll('input'), butt1 = document.querySelector('#butt1'), p1 = document.querySelector('#p1')
+// let [inp1, inp2, inp3] = inp
+
+// butt1.addEventListener('click', function() {
+//     let d = Number(inp2.value)**2 - 4*Number(inp1.value)*Number(inp3.value)
+//     let a = (-Number(inp2.value) - Math.sqrt(d)) / (2*Number(inp1.value))
+//     let b = (-Number(inp2.value) + Math.sqrt(d)) / (2*Number(inp1.value))
+//     p1.textContent = `x1 = ${a}; x2 = ${b}`
+// })
