@@ -1,0 +1,65 @@
+body {
+  background-color: #47936e;
+}
+
+.main-div {
+  max-width: 1000px;
+  margin: 100px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  align-items: center;
+}
+.main-div table td {
+  width: 50px;
+  height: 50px;
+  border: 1px solid black;
+  text-align: center;
+  font-weight: bold;
+}
+.main-div button {
+  margin-top: 50px;
+  border-radius: 12px;
+  width: 100px;
+  height: 24px;
+  background-color: rgb(164, 97, 226);
+  border: none;
+}
+.main-div .first {
+  background: rgba(78, 193, 184, 0.716);
+}
+.main-div .second {
+  background: rgba(206, 79, 166, 0.693);
+}
+.main-div .third {
+  background: rgba(194, 149, 25, 0.844);
+}
+.main-div .inputs-div {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  justify-content: center;
+  align-items: center;
+}
+.main-div .inputs-div div {
+  display: flex;
+  gap: 20px;
+}
+.main-div .inputs-div label {
+  color: azure;
+  font-size: 24px;
+  font-weight: 600;
+}
+.main-div .inputs-div input {
+  width: 200px;
+  height: 20px;
+  padding: 4px 10px;
+  border-radius: 10px;
+  border: none;
+}
+.main-div .inputs-div input:focus {
+  outline: none;
+}
+.main-div .inputs-div button {
+  margin-top: 0;
+}/*# sourceMappingURL=style.css.map */
