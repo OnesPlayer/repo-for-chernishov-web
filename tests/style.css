@@ -1,0 +1,16 @@
+.right {
+	border: 1px solid green;
+}
+.wrong {
+	border: 1px solid red;
+}
+
+button {
+    margin-top: 40px;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
